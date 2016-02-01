@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <Crashlytics/Answers.h>
+
 
 @interface ViewController ()
 
@@ -34,13 +36,13 @@
     // Play looping background music?
     // Add a file named background.mp3 to to 'Pages' folder and set the
     // option below to YES
-    LoadBackgroundMusic=YES;
+    LoadBackgroundMusic=NO;
     
     // Use transparent PNG files instead of JPGs?
     // Transparent PNGs enable the outlines of the coloring pages to stay
     // above the user's editing, so that the outlines cannot be colored over
     // Change the option below to YES, and name your files (page1.png, page2.png, etc)
-    UseTransparentPNGs=NO;
+    UseTransparentPNGs=YES;
 	    
     // *****************************
     // **  App Configuration End  **
@@ -124,6 +126,14 @@
     imageTitlescreen.image=nil;
     viewEditingCanvas.center=viewPageChooser.center;
     buttonUndo.hidden=YES;
+    // TODO: Track the user action that is important for you.
+    NSString* pageNumString = [NSString stringWithFormat:@"Page %d",
+                         pageNum];
+    [Answers logCustomEventWithName:@"Page selected"
+                   customAttributes:@{
+                                      @"Selected page" : pageNumString}];
+    //[pageNumString release]; // This one crashes.
+
     
 }
 
@@ -140,6 +150,7 @@
     NSString *pagenumString = [[NSString alloc] initWithFormat:@"Page %d of %d",pageNum,pageCount];
     labelPageNum.text=pagenumString;
     [pagenumString release];
+    
     
     buttonPageBW.hidden=NO;
     buttonPageFW.hidden=NO;
