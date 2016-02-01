@@ -16,6 +16,7 @@
 		6694D4FF1C5C1E9D004A74A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694D4FD1C5C1E9D004A74A3 /* SystemConfiguration.framework */; };
 		6694D5011C5C1F73004A74A3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694D5001C5C1F73004A74A3 /* libc++.tbd */; };
 		6694D5031C5C1F86004A74A3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694D5021C5C1F86004A74A3 /* libz.tbd */; };
+		6694D50B1C5FC66C004A74A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6694D50A1C5FC66C004A74A3 /* Images.xcassets */; };
 		83122E0016A6F7000031E1A6 /* tooladjust.png in Resources */ = {isa = PBXBuildFile; fileRef = 83122DFF16A6F7000031E1A6 /* tooladjust.png */; };
 		832932FE17EDE5FB004F63D9 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 832932FB17EDE5FB004F63D9 /* button@2x.png */; };
 		832932FF17EDE5FB004F63D9 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 832932FC17EDE5FB004F63D9 /* button.png */; };
@@ -56,6 +57,7 @@
 		6694D4FD1C5C1E9D004A74A3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		6694D5001C5C1F73004A74A3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6694D5021C5C1F86004A74A3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6694D50A1C5FC66C004A74A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Keep Them Busy/Images.xcassets"; sourceTree = "<group>"; };
 		83122DFF16A6F7000031E1A6 /* tooladjust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tooladjust.png; sourceTree = "<group>"; };
 		832932FB17EDE5FB004F63D9 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		832932FC17EDE5FB004F63D9 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		83D885A715D31612000850AC = {
 			isa = PBXGroup;
 			children = (
+				6694D50A1C5FC66C004A74A3 /* Images.xcassets */,
 				83D885BC15D31612000850AC /* ColoringApp */,
 				83D885B515D31612000850AC /* Frameworks */,
 				83D885B315D31612000850AC /* Products */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D885C115D31612000850AC /* InfoPlist.strings in Resources */,
+				6694D50B1C5FC66C004A74A3 /* Images.xcassets in Resources */,
 				832932FF17EDE5FB004F63D9 /* button.png in Resources */,
 				661C703D1C5B726D00886398 /* page2.png in Resources */,
 				83D885CD15D31612000850AC /* ViewController.xib in Resources */,
@@ -391,6 +395,7 @@
 		83D885D115D31612000850AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -409,6 +414,7 @@
 		83D885D215D31612000850AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

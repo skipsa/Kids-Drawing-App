@@ -50,7 +50,7 @@
 
     redvalue=255;
     pageNum=1;
-    size=8;
+    size=6;
     minsize=2;
     maxsize=20;
     if (UseTransparentPNGs==NO){
