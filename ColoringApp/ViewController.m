@@ -48,10 +48,11 @@
     // **  App Configuration End  **
     // *****************************
 
+    redvalue=255;
     pageNum=1;
-    size=15;
-    minsize=3;
-    maxsize=25;
+    size=8;
+    minsize=2;
+    maxsize=20;
     if (UseTransparentPNGs==NO){
         fileExtension=@"jpg";
     }else{
